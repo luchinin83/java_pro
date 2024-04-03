@@ -53,7 +53,7 @@ public class TestRunner {
         if (afterSuiteSize > 1) {
           String error = "Ожидалось не более одного метода с аннотацией AfterSuite.\n"
               + "Методы с аннотацией AfterSuite: "
-              + afterSuiteMethods.stream().map(Method::getName).toList()
+              + afterSuiteMethods.stream().map(Method::getName).collect(Collectors.toList())
               + "\n--------------------------------------------------------";
           errorsList.add(error);
         }
@@ -79,7 +79,7 @@ public class TestRunner {
         if (beforeSuiteSize > 1) {
           String error = "Ожидалось не более одного метода с аннотацией BeforeSuite.\n"
               + "Методы с аннотацией BeforeSuite: "
-              + beforeSuiteMethods.stream().map(Method::getName).toList()
+              + beforeSuiteMethods.stream().map(Method::getName).collect(Collectors.toList())
               + "\n--------------------------------------------------------";
           errorsList.add(error);
         }
@@ -118,7 +118,7 @@ public class TestRunner {
             isPriorityIncorrect = true;
           }
           return isPriorityIncorrect;
-        }).map(Method::getName).toList();
+        }).map(Method::getName).collect(Collectors.toList());
 
         if (!invalidPriorityMethods.isEmpty()) {
           String error = "Методы с аннотацией Test должны иметь приоритет от 1 до 10.\n"
@@ -147,7 +147,7 @@ public class TestRunner {
           if (beforeTestSize > 1) {
             String error = "Ожидалось не более одного метода с аннотацией BeforeTest.\n"
                 + "Методы с аннотацией BeforeTest: "
-                + beforeTestMethods.stream().map(Method::getName).toList()
+                + beforeTestMethods.stream().map(Method::getName).collect(Collectors.toList())
                 + "\n--------------------------------------------------------";
             errorsList.add(error);
           }
@@ -176,7 +176,7 @@ public class TestRunner {
           if (afterTestSize > 1) {
             String error = "Ожидалось не более одного метода с аннотацией AfterTest.\n"
                 + "Методы с аннотацией AfterTest: "
-                + afterTestMethods.stream().map(Method::getName).toList()
+                + afterTestMethods.stream().map(Method::getName).collect(Collectors.toList())
                 + "\n--------------------------------------------------------";
             errorsList.add(error);
           }
