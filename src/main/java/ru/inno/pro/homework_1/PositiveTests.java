@@ -1,10 +1,10 @@
-package ru.inno.pro.lesson2;
+package ru.inno.pro.homework_1;
 
-import ru.inno.pro.lesson2.annotations.AfterSuite;
-import ru.inno.pro.lesson2.annotations.AfterTest;
-import ru.inno.pro.lesson2.annotations.BeforeSuite;
-import ru.inno.pro.lesson2.annotations.BeforeTest;
-import ru.inno.pro.lesson2.annotations.Test;
+import ru.inno.pro.homework_1.annotations.AfterSuite;
+import ru.inno.pro.homework_1.annotations.AfterTest;
+import ru.inno.pro.homework_1.annotations.BeforeSuite;
+import ru.inno.pro.homework_1.annotations.BeforeTest;
+import ru.inno.pro.homework_1.annotations.Test;
 
 public class PositiveTests {
 
@@ -30,7 +30,6 @@ public class PositiveTests {
   @AfterTest
   void afterTestMethod() {
     System.out.println("Execute AfterTest method");
-    System.out.println("-----------------------------------------------------");
   }
 
   @Test
